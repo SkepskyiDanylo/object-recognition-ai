@@ -53,4 +53,5 @@ def save_page(filename):
 
 if __name__ == "__main__":
     app.debug = True
+    # With default 5000 if user has Steam, he'll get 400 error spam in console
     app.run(debug=True, port=5050)
