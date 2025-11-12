@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Object Recognition AI | Upload{% endblock %}
+
+{% block content %}
+<div class="upload-card">
+    <h2>Upload Your File</h2>
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="file" class="form-control file-input" required>
+        <button class="btn-upload" type="submit">Upload</button>
+    </form>
+</div>
+{% endblock %}

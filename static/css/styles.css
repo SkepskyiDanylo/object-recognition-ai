@@ -1,0 +1,77 @@
+body {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.upload-card {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    padding: 40px;
+    width: 100%;
+    max-width: 450px;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.upload-card h2 {
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.btn-upload {
+    margin-top: 25px;
+    background: #00ffcc;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-upload:hover {
+    background: #00bfa6;
+    color: #fff;
+}
+
+/* Стили для upload-card уже есть, добавим input */
+.file-input {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 12px;
+    border: 2px solid rgba(255,255,255,0.5);
+    background-color: rgba(255,255,255,0.15);
+    color: #fff;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.file-input:hover {
+    background-color: rgba(255,255,255,0.25);
+    border-color: #00ffcc;
+}
+
+.file-input::file-selector-button {
+    background-color: #00ffcc;
+    color: #000;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.file-input::file-selector-button:hover {
+    background-color: #00bfa6;
+    color: #fff;
+}
+

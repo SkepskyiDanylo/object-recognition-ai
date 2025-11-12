@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Object Recognition AI | {{pred_class}} {% endblock %}
+
+{% block content %}
+<div class="upload-card text-center">
+    <h2>{{pred_class | upper}}</h2>
+
+    <div class="result-image-container my-3">
+        <img src="{{ url_for('static', filename='uploads/' + filename) }}" alt="Uploaded Image" class="img-fluid rounded" style="max-height:300px;">
+    </div>
+    <div class="d-flex justify-content-center">
+        <p>Ai is sure for <b>{{confidence}}%</b></p>
+    </div>
+
+    <div class="d-flex justify-content-center gap-5">
+
+        <form action="/save/{{filename}}?status=1&name={{pred_class}}" method="post" style="display:inline;">
+            <input type="hidden" name="feedback" value="correct">
+            <button type="submit" class="btn-upload" style="background-color:#00ffcc;">Correct</button>
+        </form>
+
+        <form action="/save/{{filename}}?status=0&name={{pred_class}}" method="post" style="display:inline;">
+            <input type="hidden" name="feedback" value="incorrect">
+            <button type="submit" class="btn-upload" style="background-color:#ff4c4c;">Incorrect</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
